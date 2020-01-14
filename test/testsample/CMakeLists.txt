@@ -6,7 +6,7 @@ set(testsample_srcs
     sample2-t.cc
     sample3-t.cc
     sample_template-t.cc
-    sample_fake-t.cc
+#    sample_fake-t.cc
     )
 
 include_directories("${PROJECT_SOURCE_DIR}/include"

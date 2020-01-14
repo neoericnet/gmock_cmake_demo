@@ -7,17 +7,16 @@ class FooTest {
 public:
     virtual ~FooTest() {}
     virtual char DoThis(int n) = 0;
-    virtual void DoThat(const char* s, int* p) = 0;
+//    virtual void DoThat(const char* s, int* p) = 0;
 };
 
-class FakeFoo : public Foo {
+class FakeFoo : public FooTest {
 public:
     virtual char DoThis(int n) {
-        return (n > 0) ? '+' :
-               (n < 0) ? '-' : '0';
+        return '0';
     }
 
-    virtual void DoThat(const char* s, int* p) {
-        *p = strlen(s);
-    }
+//    virtual void DoThat(const char* s, int* p) {
+//        *p = strlen(s);
+//    }
 };
