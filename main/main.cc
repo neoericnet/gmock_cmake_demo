@@ -1,69 +1,30 @@
 //
 // Created by eric on 1/8.
 //
-
-#include <iostream>
+#include "proxy_header_replace_test.h"
+#include "derivedclass_test.h"
+#include "namespace_test.h"
+#include "header_replace_test.cc"
+#include "iostream"
 using namespace std;
 
-class Shape {
-protected:
-  int width, height;
-public:
-  Shape( int a=0, int b=0)
-  {
-    width = a;
-    height = b;
-  }
+void prepare(HEADER_REPLACE obj){
+  obj.x = 11;
+}
 
-  int testAccessLocalOrSub(){
-    area();
-  }
+void testReplaceHeader(){
+  HEADER_REPLACE test;
+  test.buildData();
+  prepare(test);
+  cout << "testReplaceHeader x is :" << test.getX() << endl;
+}
 
-  int area()
-  {
-    cout << "Parent class area :" <<endl;
-    return 0;
-  }
-};
-
-class Rectangle: public Shape{
-public:
-  Rectangle( int a=0, int b=0):Shape(a, b) { }
-  int area ()
-  {
-    cout << "Rectangle class area :" <<endl;
-    return (width * height);
-  }
-  int testAccessLocalOrSub(){
-    Shape::area();
-  }
-};
-class Triangle: public Shape{
-public:
-  Triangle( int a=0, int b=0):Shape(a, b) { }
-  int area ()
-  {
-    cout << "Triangle class area :" <<endl;
-    return (width * height / 2);
-  }
-};
 // 程序的主函数
 int main( )
 {
-  Shape *shape;
-  Rectangle rec(10,7);
-  Triangle  tri(10,5);
-
-  // 存储矩形的地址
-  shape = &rec;
-  // 调用矩形的求面积函数 area
-//  shape->area();
-  rec.testAccessLocalOrSub();
-
-  // 存储三角形的地址
-  shape = &tri;
-  // 调用三角形的求面积函数 area
-  shape->area();
-
-  return 0;
+//  testDerivedClass();
+//  testNameSpace();
+//  using namespace testMain;
+//  testNameSpace();
+  testReplaceHeader();
 }
