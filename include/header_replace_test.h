@@ -9,6 +9,7 @@ class HEADER_REPLACE{
 public:
   void buildData();
   int getX();
+  void prepare();
 private:
   int x;
 };

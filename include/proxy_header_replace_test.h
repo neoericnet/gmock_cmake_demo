@@ -8,7 +8,7 @@ class HEADER_REPLACE{
 public:
   void buildData();
   int getX();
-  friend void prepare(HEADER_REPLACE obj);
+  void prepare();
 private:
   int x;
 };
