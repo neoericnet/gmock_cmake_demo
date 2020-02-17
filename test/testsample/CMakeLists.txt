@@ -4,7 +4,7 @@ set(testsample_srcs
     testsample_main.cc
     sample1-t.cc
     sample2-t.cc
-    sample3-t.cc
+#    sample3-t.cc
     sample_template-t.cc
 #    sample_fake-t.cc
     )
