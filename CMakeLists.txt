@@ -7,5 +7,6 @@ set(main_srcs
     ${CMAKE_CURRENT_SOURCE_DIR}/main/sample1.cc)
 
 add_subdirectory(main)
-add_subdirectory(test)
-add_subdirectory(libturtle)
+# add_subdirectory(test)
+# add_subdirectory(libturtle)
+# add_subdirectory(flamegraph)

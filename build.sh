@@ -10,4 +10,4 @@ mkdir -p ${BUILD_PATH}
 
 cd ${BUILD_PATH}
 cmake ..
-make
+make -j4

@@ -2,11 +2,12 @@
 
 set(testsample_srcs
     testsample_main.cc
-    sample1-t.cc
-    sample2-t.cc
+#    sample1-t.cc
+#    sample2-t.cc
 #    sample3-t.cc
-    sample_template-t.cc
+#    sample_template-t.cc
 #    sample_fake-t.cc
+     sample_death-t.cc
     )
 
 include_directories("${PROJECT_SOURCE_DIR}/include"
